@@ -1,7 +1,9 @@
-if (!(Test-Path -Path 'C:/minGW/bin/')) {
-    Set-ExecutionPolicy Bypass -Scope Process -Force
+if (!(Get-Command g++)) {
+    if (!(Get-Command choco)) {
+        Set-ExecutionPolicy Bypass -Scope Process -Force
+        iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    }
 
-    iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     choco upgrade chocolatey
     choco install mingw
 

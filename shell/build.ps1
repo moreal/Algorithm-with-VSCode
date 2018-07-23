@@ -16,7 +16,11 @@ if (-not (Test-Path -Path ./bin/)) {
 
 ''
 
-g++ -o ./bin/test.exe $filename
+g++ -o ./bin/test.exe $filename -std=c++17
+
+"[!] Program was executed"
+
+''
 
 ./bin/test.exe
 

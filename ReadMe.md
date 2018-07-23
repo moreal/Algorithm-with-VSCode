@@ -4,24 +4,12 @@ This is project template for algorithm solving in vscode;
 
 ## Install
 
-1. Execute git clone
+1. Install G++ Latest  
+[Link](https://sourceforge.net/projects/mingw-w64/files/?source=navbar)
+
+2. Execute git clone
 ```git
 git clone https://github.com/moreal/Algorithm-with-VSCode.git
-```
-
-2. Execute ./shell/install.ps1
-```powershell
-if (!(Test-Path -Path 'C:/minGW/bin/')) {
-    Set-ExecutionPolicy Bypass -Scope Process -Force
-
-    iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-    choco upgrade chocolatey
-    choco install mingw
-
-    $ENV:Path += ';C:\MinGW\bin'
-}
-
-Set-ExecutionPolicy -ExecutionPolicy REMOTESIGNED
 ```
 
 ## How to use
@@ -29,6 +17,10 @@ Set-ExecutionPolicy -ExecutionPolicy REMOTESIGNED
 just use in vscode!!
 
 'ctrl + shift + b' for build
+
+## Language
+- C++
+- Python
 
 ## Additional
 

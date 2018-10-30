@@ -7,16 +7,20 @@
     "command": "powershell",
     "tasks": [
         {
-            "taskName": "Build",
+            "label": "Build",
             "type": "shell",
-            "command": "powershell",
-            "args": [
-                "${workspaceFolder}\\shell\\build.ps1",
-                "-dir",
-                "${workspaceFolder}\\shell\\bin",
-                "-filename",
-                "${file}"
-            ],
+            "command": "./shell/build.sh",
+            "windows": {
+                "command": "powershell",
+                "args": [
+                    "${workspaceFolder}\\shell\\build.ps1",
+                    "-dir",
+                    "${workspaceFolder}\\shell\\bin",
+                    "-filename",
+                    "${file}"
+                ]
+            },
+            
             "group": {
                 "kind": "build",
                 "isDefault": true
